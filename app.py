@@ -33,7 +33,7 @@ def fileUpload():
             
             flash(file.filename+' Uploaded Successfully','success')
             
-    return render_template('fileUpload.html')
+    return render_template('fileUploadSuccessful.html')
     
 if __name__=='__main__':
     app.secret_key='secret123'
