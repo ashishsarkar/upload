@@ -31,9 +31,10 @@ def fileUpload():
             new_filename = secure_filename(filename+str(random.randint(10000,99999))+"."+file_extension)
             file.save(os.path.join(UPLOAD_FOLDER, new_filename))   
             
-            flash(file.filename+' Uploaded Successfully','success')
+            # flash(file.filename+' Uploaded Successfully','success')
+            return render_template('fileUploadSuccessful.html')
             
-    return render_template('fileUploadSuccessful.html')
+    return render_template('fileUpload.html')
     
 if __name__=='__main__':
     app.secret_key='secret123'
